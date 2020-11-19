@@ -1,0 +1,7 @@
+# Exclude MacOS files
+.DS_Store
+
+# Exclude Jupiter checkpoints
+.ipynb_checkpoints
+
+.idea

@@ -21,7 +21,7 @@ GANs are a particular __generative model__ crafted by Ian Goodfellow et al. in 2
 The vanilla implementation of GANs, is composed by two distinct Multilayers Perceptron architectures in which a network is trained to generate fake data, the __Generator__, and the second network is trained to discriminate between real and fake data, the __Discriminator__. If we are lucky, at the end of the training, the Generator will have learned to generate samples that resemble those coming from <img src="https://render.githubusercontent.com/render/math?math=P_{data}">.
 
 <p align="center">
-  <img src="/images/simple-gan.png" width="500">
+  <img src="/images/simple-gan.png" width="300">
 <p/>
 
 ## Usage

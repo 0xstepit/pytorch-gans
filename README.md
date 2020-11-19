@@ -1,11 +1,12 @@
 # GENERATIVE ADVERSARIAL NETWORKS
 
-<img src="/images/gan.png" width="400">
+<p align="center">
+  <img src="/images/gan.png" width="250">
+<p/>
 
 This repo contains my implementation of several GANs models. All the models are generated within Jupyter notebooks and in a tutorial fashion. I tried to include the most important concepts related to the theory and I tried to make the codes clearer possible. All the functions and classes are commented, and when useful I also included pictures in order to better explain the concepts.
 
 # Table of Contents
-___
 
 * [Introduction to GANs](#introduction-to-gans)
 * [Usage](#usage)
@@ -15,7 +16,7 @@ ___
   - [Deep Convolutional GANs](#deep-convolutional-gans)
 
 ## Introduction to GANs
-GANs are a particular __generative model__ crafted by Ian Goodfellow et al. in 2014 with the aim of estimating the distribution behind data. Before diving into the models, it is better to give a context for them! Let's say we have a data set that comes from an unknown probability distribution \(P_{data}\). Our goal is to find a distribution $P_{\theta}$, with parameters \(\theta\), that approximates well \(P_{data}\). Instead of trying to directly identify \(P_{\theta}\), for example with __Maximum Likelihood Estimation__ (MLE), we can make a __Neural Network__ (NN) learn a map from a known distribution, i.e. Gaussian, to the desired distribution. In this case \(\theta\) contains the parameter of the network. This approach is motivated by the fact that it allows workig with distributions defined in a low dimension manifold (don't be scared, this concept will be explained in the Notebook 3 :wink:) and sometimes is more useful the possibility to easily generate samples than the explicit knowledge of the density distribution.
+GANs are a particular __generative model__ crafted by Ian Goodfellow et al. in 2014 with the aim of estimating the distribution behind data. Before diving into the models, it is better to give a context for them! Let's say we have a data set that comes from an unknown probability distribution \(P_{data}\). Our goal is to find a distribution <img src="https://render.githubusercontent.com/render/math?math=P_{\theta}">, with parameters \(\theta\), that approximates well \(P_{data}\). Instead of trying to directly identify \(P_{\theta}\), for example with __Maximum Likelihood Estimation__ (MLE), we can make a __Neural Network__ (NN) learn a map from a known distribution, i.e. Gaussian, to the desired distribution. In this case \(\theta\) contains the parameter of the network. This approach is motivated by the fact that it allows workig with distributions defined in a low dimension manifold (don't be scared, this concept will be explained in the Notebook 3 :wink:) and sometimes is more useful the possibility to easily generate samples than the explicit knowledge of the density distribution.
 
 The vanilla implementation of GANs, is composed by two distinct Multilayers Perceptron architectures in which a network is trained to generate fake data, the __Generator__, and the second network is trained to discriminate between real and fake data, the __Discriminator__. If we are lucky, at the end of the training, the Generator will have learned to generate samples that resemble those coming from \(P_{data}\).
 
@@ -62,7 +63,7 @@ Contains my implementation of the paper ["Unsupervised Representation Learning w
 In this notebook you will explore also how to walk inside the latent space of our Generator to interpolate samples:
 
 <p align="center">
-  <img src="/images/models/dcgan/interpolation.png" width="500">
+  <img src="/images/models/dcgan/interpolation.png" width="300">
 </p>
 
 The notebook ends with a simple example on how to save and load the weight of your trained model.
